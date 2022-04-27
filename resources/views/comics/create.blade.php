@@ -10,6 +10,8 @@
         </div>
         <div class="container">
             <form action="{{ route('comics.store')}}" method="POST">
+                @csrf
+
                 <div>
                     <label for="name">Titolo</label>
                     <input type="text" name="title" id="name" placeholder="Inserisci il titolo del comic">
@@ -20,7 +22,7 @@
                 </div>
                 <div>
                     <label for="name">Serie di appartenenza</label>
-                    <input type="text" name="serie" id="name" placeholder="Inserisci la serie">
+                    <input type="text" name="series" id="name" placeholder="Inserisci la serie">
                 </div>
                 <div>
                     <label for="name">Data di uscita</label>
@@ -33,10 +35,10 @@
                         <option value="graphic novel">graphic novel</option>
                     </select>
                 </div>
+                <button type="submit">
+                    Crea
+                </button>
             </form>
-            <button type="submit">
-                Crea
-            </button>
         </div>
     </main>
 
