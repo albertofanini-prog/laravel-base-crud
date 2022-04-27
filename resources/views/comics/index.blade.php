@@ -12,6 +12,7 @@
         <th>Series</th>
         <th>Vendita</th>
         <th>Tipo</th>
+        <th></th>
     </thead>
     <body>
         @foreach ($comics as $c)
@@ -33,6 +34,9 @@
                 </td>
                 <td>
                     {{$c->type}}
+                </td>
+                <td>
+                    <a href="{{route('comics.show', $c)}}">Visualizza</a>
                 </td>
             </tr>
         @endforeach

@@ -54,9 +54,9 @@ class ComicController extends Controller
     {
         // dd($id);
         //SELECT * FROM pastas
-            //WHERE id = $id
+            //WHERE id = $id    
         //recuperare elemento:
-        $comic = Comic::find($id);
+        $comic = Comic::findOrFail($id);
 
         //passare alla vista
         return view('comics.show', compact('comic'));

@@ -11,7 +11,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="">Comics</a>
+                    <a href="{{ route('comics.index') }}">Comics</a>
                 </li>
             </ul>
         </nav>
