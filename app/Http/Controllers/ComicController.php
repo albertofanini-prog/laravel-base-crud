@@ -30,7 +30,9 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        //passa solo una vista
+            //contente un form
+        return view('comics.create');
     }
 
     /**
@@ -47,16 +49,16 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Comic $comic
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
         // dd($id);
         //SELECT * FROM pastas
             //WHERE id = $id    
         //recuperare elemento:
-        $comic = Comic::findOrFail($id);
+        // $comic = Comic::findOrFail($id);
 
         //passare alla vista
         return view('comics.show', compact('comic'));
