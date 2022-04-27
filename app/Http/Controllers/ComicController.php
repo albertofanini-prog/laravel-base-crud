@@ -17,7 +17,7 @@ class ComicController extends Controller
     {
 
         //recuperare i dati dal db
-            //SELECT * from comics
+            //SELECT * FROM comics
         $comics = Comic::all();
 
         return view('comics.index', compact('comics'));
@@ -52,7 +52,14 @@ class ComicController extends Controller
      */
     public function show($id)
     {
-        //
+        // dd($id);
+        //SELECT * FROM pastas
+            //WHERE id = $id
+        //recuperare elemento:
+        $comic = Comic::find($id);
+
+        //passare alla vista
+        return view('comics.show', compact('comic'));
     }
 
     /**

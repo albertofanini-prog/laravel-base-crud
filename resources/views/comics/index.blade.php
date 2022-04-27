@@ -5,9 +5,20 @@
 @section('content')
 
 <table>
+    <thead>
+        <th>ID</th>
+        <th>Titolo</th>
+        <th>Prezzo</th>
+        <th>Series</th>
+        <th>Vendita</th>
+        <th>Tipo</th>
+    </thead>
     <body>
         @foreach ($comics as $c)
             <tr>
+                <td>
+                    {{$c->id}}
+                </td>
                 <td>
                     {{$c->title}}
                 </td>

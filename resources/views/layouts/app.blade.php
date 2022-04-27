@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Comics</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     @yield('content')
 </body>
 </html>
