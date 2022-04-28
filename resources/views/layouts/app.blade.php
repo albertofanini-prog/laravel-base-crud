@@ -11,7 +11,10 @@
         <nav>
             <ul>
                 <li>
-                    <a href="{{ route('comics.index') }}">Comics</a>
+                    <a href="{{ route('comics.index') }}">Comics Index</a>
+                </li>
+                <li>
+                    <a href="{{ route('comics.create') }}">Add New Comic</a>
                 </li>
             </ul>
         </nav>

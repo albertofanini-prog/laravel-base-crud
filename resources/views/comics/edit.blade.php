@@ -12,7 +12,7 @@
             </h1>
         </div>
         <div class="container">
-            <form action="{{ route('comics.update', $comic->id)}}" method="P">
+            <form action="{{ route('comics.update', $comic->id)}}" method="POST">
                 @csrf
                 @method('PUT')
                 {{-- <input type="hidden" name="_method" method="PUT"> --}}
