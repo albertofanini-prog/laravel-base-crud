@@ -14,7 +14,7 @@
 
                 <div class="form-group">
                     <label for="name" class="form-label">Titolo</label>
-                    <input type="text" name="title" value="{{old('title')}}" id="name" class="@error('title' ) is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic"/>
+                    <input type="text" name="title" value="{{old('title')}}" id="name" class="@error('title') is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic"/>
 
                     {{-- @error('title')
                         <div class="alert alert-danger">
@@ -24,15 +24,15 @@
                 </div>
                 <div class="form-group">
                     <label for="name" class="form-label">Prezzo</label>
-                    <input type="text" name="price" value="{{old('price')}}" id="name" class="@error('price' ) is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic" placeholder="Inserisci il prezzo">
+                    <input type="text" name="price" value="{{old('price')}}" id="name" class="@error('price') is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic" placeholder="Inserisci il prezzo">
                 </div>
                 <div class="form-group">
                     <label for="name" class="form-label">Serie di appartenenza</label>
-                    <input type="text" name="series" value="{{old('series')}}" id="name"class="@error('series' ) is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic" placeholder="Inserisci la serie">
+                    <input type="text" name="series" value="{{old('series')}}" id="name"class="@error('series') is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic" placeholder="Inserisci la serie">
                 </div>
                 <div class="form-group">
                     <label for="name" class="form-label">Data di uscita</label>
-                    <input type="text" name="sale_date" value="{{old('sale_date')}}" id="name" class="@error('sale_date' ) is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic" placeholder="AAAA/MM/GG">
+                    <input type="text" name="sale_date" value="{{old('sale_date')}}" id="name" class="@error('sale_date') is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic" placeholder="AAAA/MM/GG">
                 </div>
                 <div class="form-group">
                     <label for="name">Genere</label>
