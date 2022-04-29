@@ -18,7 +18,7 @@
                 {{-- <input type="hidden" name="_method" method="PUT"> --}}
 
                 <div>
-                    <label for="name">Titolo</label>
+                    <label for="title">Titolo</label>
                     <input type="text" name="title" id="name" value="{{$comic->title}}" placeholder="Inserisci il titolo del comic">
                 </div>
                 <div>
@@ -31,7 +31,7 @@
                 </div>
                 <div>
                     <label for="name">Data di uscita</label>
-                    <input type="text" name="sale_date" id="name" value="{{$comic->sale_date}}" placeholder="Inserisci la data di uscita">
+                    <input type="text" name="sale_date" id="name" value="{{$comic->sale_date}}" placeholder="AAAA/MM/GG">
                 </div>
                 <div>
                     <label for="name">Genere</label>

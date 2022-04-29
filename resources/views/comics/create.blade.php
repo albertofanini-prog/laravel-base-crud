@@ -12,23 +12,29 @@
             <form action="{{ route('comics.store')}}" method="POST">
                 @csrf
 
-                <div>
-                    <label for="name">Titolo</label>
-                    <input type="text" name="title" id="name" placeholder="Inserisci il titolo del comic">
+                <div class="form-group">
+                    <label for="name" class="form-label">Titolo</label>
+                    <input type="text" name="title" value="{{old('title')}}" id="name" class="@error('title' ) is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic"/>
+
+                    {{-- @error('title')
+                        <div class="alert alert-danger">
+                            {{$message}}
+                        </div>
+                    @enderror --}}
                 </div>
-                <div>
-                    <label for="name">Prezzo</label>
-                    <input type="text" name="price" id="name" placeholder="Inserisci il prezzo">
+                <div class="form-group">
+                    <label for="name" class="form-label">Prezzo</label>
+                    <input type="text" name="price" value="{{old('price')}}" id="name" class="@error('price' ) is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic" placeholder="Inserisci il prezzo">
                 </div>
-                <div>
-                    <label for="name">Serie di appartenenza</label>
-                    <input type="text" name="series" id="name" placeholder="Inserisci la serie">
+                <div class="form-group">
+                    <label for="name" class="form-label">Serie di appartenenza</label>
+                    <input type="text" name="series" value="{{old('series')}}" id="name"class="@error('series' ) is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic" placeholder="Inserisci la serie">
                 </div>
-                <div>
-                    <label for="name">Data di uscita</label>
-                    <input type="text" name="sale_date" id="name" placeholder="Inserisci la data di uscita">
+                <div class="form-group">
+                    <label for="name" class="form-label">Data di uscita</label>
+                    <input type="text" name="sale_date" value="{{old('sale_date')}}" id="name" class="@error('sale_date' ) is-invalid @enderror form-control" placeholder="Inserisci il titolo del comic" placeholder="AAAA/MM/GG">
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="name">Genere</label>
                     <select name="type" id="type">
                         <option value="comic book">comic book</option>
@@ -38,6 +44,20 @@
                 <button type="submit">
                     Crea
                 </button>
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>
+                                    {{$error}}
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+
+                @endif
+
             </form>
         </div>
     </main>
