@@ -113,8 +113,18 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Comic $comic)
-    {
-        $comic->delete();
+    {   
+        if($pasta->trashed()){
+            $comic->forceDelete();
+        } else{
+            $comic->delete();
+        }
+
+        return redirect()->route('comics.index');
+    }
+
+    public function forceDestroy(Comic $comic){
+        $comic->forceDelete();
 
         return redirect()->route('comics.index');
     }
