@@ -18,7 +18,8 @@ class ComicController extends Controller
 
         //recuperare i dati dal db
             //SELECT * FROM comics
-        $comics = Comic::all();
+        $comics = Comic::withTrashed()->get();
+        // $comics = Comic::onlyTrashed()->get();
 
         return view('comics.index', compact('comics'));
     }
@@ -114,7 +115,7 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {   
-        if($pasta->trashed()){
+        if($comic->trashed()){
             $comic->forceDelete();
         } else{
             $comic->delete();
@@ -122,6 +123,8 @@ class ComicController extends Controller
 
         return redirect()->route('comics.index');
     }
+
+
 
     public function forceDestroy(Comic $comic){
         $comic->forceDelete();

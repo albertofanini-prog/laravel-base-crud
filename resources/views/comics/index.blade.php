@@ -59,7 +59,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit">
-                                    Elimina
+                                    {{$c->deleted_at ? 'Elimina definitivamente' : 'Elimina'}}
                                 </button>
                             </form>
                         </td>
